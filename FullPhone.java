@@ -299,8 +299,29 @@ public static void PhoneBook(){
 
 
                     break;}
-                case 5 : {System.out.println("Edith"); break;}
-                case 6 : System.out.println("Assgn Tone"); break;
+                case 5 : {
+                        System.out.println("Edith");
+                        System.out.println("Search");
+                        System.out.println("enter 0 to go back to previous menu");
+                        int enterNumber = input.nextInt();
+                        if(enterNumber == 0){
+                        messages();
+                        }else{
+                                System.out.println("invalid number");
+                        }
+                        break;}
+                case 6 : {
+
+                    System.out.println("Assgn Tone");
+                    System.out.println("Search");
+                        System.out.println("enter 0 to go back to previous menu");
+                        int enterNumber = input.nextInt();
+                        if(enterNumber == 0){
+                        messages();
+                        }else{
+                                System.out.println("invalid number");
+                        }
+                    break;}
                 case 7 : {
 
                         System.out.println("""
@@ -311,55 +332,145 @@ public static void PhoneBook(){
 
                         """);
                         int messageSetting = input.nextInt();
-                     switch(messageSetting) {
-                     case 0 : { messages();}
-                     case 1 : {
-                        System.out.println("""
-                            1  - message center number
-                            2  - message sent as
-                            3  - mesage validity
-                            4 - enter 0 to go back to previous menu
-                            5  -> enter 99 to go back to main menu
+                                switch(messageSetting) {
+                                case 0 : { messages();}
+                                case 1 : {
+                                    System.out.println("""
+                                        1  - message center number
+                                        2  - message sent as
+                                        3  - mesage validity
+                                        4 - enter 0 to go back to previous menu
+                                        5  -> enter 99 to go back to main menu
 
-                        """);
-                                int set = input.nextInt();
-                                    switch(set){
-                                         case 0 : { messages();}
-                                         case 99 : {main(null);} break;
-                                         case 1 : System.out.println("message center number"); break;
-                                         case 2 : System.out.println("message sent as"); break;
-                                         case 3 : System.out.println("mesage validity"); break;
-                                    }
-                                break;}
-                     case 2 : {
-                                System.out.println("""
-                            1  - Delivery report
-                            2  - Reply via same center
-                            3  - character support
-                            4 - enter 0 to go back to previous menu
-                            5  -> enter 99 to go back to main menu
+                                    """);
+                                            int set = input.nextInt();
+                                                switch(set){
+                                                    case 0 : { messages();}
+                                                    case 99 : {main(null);} break;
+                                                    case 1 :{
+                                                                        System.out.println("message center number");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                break;}
+                                                    case 2 : {
+                                                                        System.out.println("message sent as");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                    break;}
+                                                    case 3 : {
+                                                                        System.out.println("mesage validity");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
+                                                            }
+                                            break;}
+                                case 2 : {
+                                            System.out.println("""
+                                        1  - Delivery report
+                                        2  - Reply via same center
+                                        3  - character support
+                                        4 - enter 0 to go back to previous menu
+                                        5  -> enter 99 to go back to main menu
 
-                        """);
-                                int common = input.nextInt();
-                                    switch(common){
-                                         case 99 : {main(null);} break;
-                                         case 0 : { messages();}
-                                         case 1 : System.out.println("Delivery report"); break;
-                                         case 2 : System.out.println("Reply via same center"); break;
-                                         case 3 : System.out.println("character support"); break;
-                                    }
+                                    """);
+                                            int common = input.nextInt();
+                                                switch(common){
+                                                    case 99 : {main(null);} break;
+                                                    case 0 : { messages();}
+                                                    case 1 : {
+                                                                        System.out.println("Delivery report");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
+                                                            break;}
+                                                    case 2 : {
+                                                                        System.out.println("Reply via same center");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
+
+                                                        break;}
+                                                    case 3 : {
+                                                                        System.out.println("character support");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
+                                                        break;}
+                                                }
+
+                                                break;}
+                                default : System.out.println("invalid input");
+                                }
 
                                     break;}
-                     default : System.out.println("invalid input");
-                     }
+                            case 8 : {
+                                            System.out.println("info service");
+                                            System.out.println("Search");
+                                            System.out.println("enter 0 to go back to previous menu");
+                                            int enterNumber = input.nextInt();
+                                            if(enterNumber == 0){
+                                            messages();
+                                            }else{
+                                                    System.out.println("invalid number");
+                                            }
+                                    break;}
+                            case 9 : {
 
-                        break;}
-                case 8 : System.out.println("info service"); break;
-                case 9 : System.out.println("voice mail box number"); break;
-                case 10 : System.out.println(" Service command editor"); break;
-                default : System.out.println("invalid input");
+                                    System.out.println("voice mail box number");
+                                    System.out.println("Search");
+                                    System.out.println("enter 0 to go back to previous menu");
+                                    int enterNumber = input.nextInt();
+                                    if(enterNumber == 0){
+                                    messages();
+                                    }else{
+                                            System.out.println("invalid number");
+                                    }
+                                    break;}
+                            case 10 : {
 
-        }
+                                    System.out.println(" Service command editor");
+                                    System.out.println("Search");
+                                    System.out.println("enter 0 to go back to previous menu");
+                                    int enterNumber = input.nextInt();
+                                    if(enterNumber == 0){
+                                    messages();
+                                    }else{
+                                            System.out.println("invalid number");
+                                    }
+                                    break;}
+                            default : System.out.println("invalid input");
+
+                    }
    }
 
 //............................................................................
@@ -403,34 +514,122 @@ public static void callRegister(){
         switch(phoneBookInput){
 
         case 0 : { main(null);}
-        case 1 : System.out.println("Missed calls"); break;
-        case 2 : System.out.println("Recieve calls"); break;
-        case 3 : System.out.println("dialled Numbers"); break;
-        case 4 : System.out.println("Erase recent call list"); break;
+        case 1 : {
+                                    System.out.println("Missed calls");
+                                    System.out.println("enter 0 to go back to previous menu");
+                                    int enterNumber = input.nextInt();
+                                    if(enterNumber == 0){
+                                    messages();
+                                    }else{
+                                            System.out.println("invalid number");
+                                    }
+                    break;}
+        case 2 : {
+                                    System.out.println("Recieve calls");
+                                    System.out.println("enter 0 to go back to previous menu");
+                                    int enterNumber = input.nextInt();
+                                    if(enterNumber == 0){
+                                    messages();
+                                    }else{
+                                            System.out.println("invalid number");
+                                    }
+                break;}
+        case 3 : {
+                                    System.out.println("dialled Numbers");
+                                    System.out.println("enter 0 to go back to previous menu");
+                                    int enterNumber = input.nextInt();
+                                    if(enterNumber == 0){
+                                    messages();
+                                    }else{
+                                            System.out.println("invalid number");
+                                    }
+                break;}
+        case 4 : {
+                                    System.out.println("Erase recent call list");
+                                    System.out.println("enter 0 to go back to previous menu");
+                                    int enterNumber = input.nextInt();
+                                    if(enterNumber == 0){
+                                    messages();
+                                    }else{
+                                            System.out.println("invalid number");
+                                    }
+                    break;}
         case 5 :{
-                   System.out.println("""
-    1  - Last call duration
-    2  - All call`s durunation
-    3  - Recieved call`s durunation
-    4  - Dialled calls~s durunation
-    5  - Clear counters
-    6 - enter 0 to go back to previous menu
-    7  -> enter 99 to go back to main menu
+                                System.out.println("""
+                    1  - Last call duration
+                    2  - All call`s durunation
+                    3  - Recieved call`s durunation
+                    4  - Dialled calls~s durunation
+                    5  - Clear counters
+                    6 - enter 0 to go back to previous menu
+                    7  -> enter 99 to go back to main menu
 
-    """);
-        int callDurunation = input.nextInt();
+                    """);
+                        int callDurunation = input.nextInt();
 
-            switch(callDurunation){
-                case 99 : {main(null);} break;
-                case 0 : { callRegister();}
-                case 1 : System.out.println("Last call duration"); break;
-                case 2 : System.out.println("All call`s durunation"); break;
-                case 3 : System.out.println("Recieved call`s durunation"); break;
-                case 4 : System.out.println("Dialled calls~s durunation"); break;
-                case 5 : System.out.println("Clear counters"); break;
-                default : System.out.println("invalid input");
+                                    switch(callDurunation){
+                                        case 99 : {main(null);} break;
+                                        case 0 : { callRegister();}
+                                        case 1 : {
+                                                                        System.out.println("Last call duration");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
+                                        break;}
+                                        case 2 : {
+                                                                        System.out.println("All call`s durunation");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
 
-            break;}
+                                                        break;}
+                                        case 3 : {
+                                                                        System.out.println("Recieved call`s durunation");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
+                                        break;}
+                                        case 4 : {
+                                                                        System.out.println("Dialled calls~s durunation");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
+
+                                                                        break;}
+                                        case 5 : {
+                                                                        System.out.println("Clear counters");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
+                                                                        break;}
+                                        default : System.out.println("invalid input");
+
+                break;}
 
                 }
         case 6 : {
@@ -443,29 +642,39 @@ public static void callRegister(){
 
 
     """);
-        int showAllCallCost = input.nextInt();
+                        int showAllCallCost = input.nextInt();
 
-            switch(showAllCallCost){
-                case 99 : {main(null);} break;
-                case 0 : { callRegister();}
-                case 1 : System.out.println("show last call"); break;
-                case 2 : System.out.println("All call cost"); break;
-                case 3 : System.out.println("clear counters"); break;
-                default : System.out.println("invalid input");
+                            switch(showAllCallCost){
+                                case 99 : {main(null);} break;
+                                case 0 : { callRegister();}
+                                case 1 : {
+                                                                        System.out.println("show last call");
+                                                                        System.out.println("enter 0 to go back to main menu");
+                                                                        int enterNumber = input.nextInt();
+                                                                        if(enterNumber == 0){
+                                                                        return;
+                                                                        }else{
+                                                                            System.out.println("invalid number");
+                                                                        }
+                                                                        break;}
+                                                break;}
+                                case 2 : System.out.println("All call cost"); break;
+                                case 3 : System.out.println("clear counters"); break;
+                                default : System.out.println("invalid input");
 
-           break; }
+                        break; }
 
-                }
-        case 7 : {
-                   System.out.println("""
-    1  - call cost limits
-    2  - Show cost in
-    3 -  enter 0 to go back to previous menu
-    4  - enter 99 to go back to main menu
+                                }
+                        case 7 : {
+                                System.out.println("""
+                    1  - call cost limits
+                    2  - Show cost in
+                    3 -  enter 0 to go back to previous menu
+                    4  - enter 99 to go back to main menu
 
 
 
-    """);
+                    """);
         int callCostSetting = input.nextInt();
 
             switch(callCostSetting){
@@ -478,7 +687,16 @@ public static void callRegister(){
             }
 
                 break;}
-        case 8 : System.out.println("prepaid credit"); break;
+        case 8 : {
+                                    System.out.println("prepaid credit");
+                                    System.out.println("enter 0 to go back to previous menu");
+                                    int enterNumber = input.nextInt();
+                                    if(enterNumber == 0){
+                                    messages();
+                                    }else{
+                                            System.out.println("invalid number");
+                                    }
+                break;}
         default : System.out.println("invalid input");
         break;}
 

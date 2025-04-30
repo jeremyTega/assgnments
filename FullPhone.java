@@ -41,10 +41,10 @@ public class FullPhone {
                 case 11 -> clock();
                 case 12 -> Profiles();
                 case 13 -> SimService();
-                case 0 -> {
-                    System.out.println("Exiting... Goodbye!");
-                    System.exit(0);
-                }
+                // case 0 -> {
+                //     System.out.println("Exiting... Goodbye!");
+                //     System.exit(0);
+                // }
                 default -> System.out.println("invalid input");
             }
         }
@@ -53,6 +53,7 @@ public class FullPhone {
     //............................................................................
 
     public static void PhoneBook() {
+       // while(true)
         System.out.println("""
                 1  - Search
                 2  - Service Nos
@@ -149,44 +150,9 @@ public class FullPhone {
                 }
                 break;
             }
-            case 8 -> {
-                System.out.println("""
-                        1  -> Type of view
-                        2  -> Memory status
-                        3  -> enter 0 to go back to previous menu
-                        4  -> enter 99 to go back to main menu
-                        """);
 
-                int card = input.nextInt();
-                switch (card) {
-                    case 99 -> main(null);
-                    case 0 -> PhoneBook();
-                    case 1 -> {
-                        System.out.println("Type of view");
-                        System.out.println("enter 0 to go back to previous menu");
-                        int enterNumber = input.nextInt();
-                        if (enterNumber == 0) {
-                            PhoneBook();
-                        } else {
-                            System.out.println("invalid number");
-                        }
-                        break;
-                    }
-                    case 2 -> {
-                        System.out.println("Memory status");
-                        System.out.println("enter 0 to go back to previous menu");
-                        int enterNumber = input.nextInt();
-                        if (enterNumber == 0) {
-                            PhoneBook();
-                        } else {
-                            System.out.println("invalid number");
-                        }
-                        break;
-                    }
-                    default -> System.out.println("invalid input");
-                }
-                break;
-            }
+            case 8 -> optionEight();
+
             case 9 -> {
                 System.out.println("Speed dial");
                 System.out.println("enter 0 to go back to previous menu");
@@ -329,7 +295,7 @@ public class FullPhone {
                                 System.out.println("enter 0 to go back to main menu");
                                 int enterNumber = input.nextInt();
                                 if (enterNumber == 0) {
-                                    return;
+                                    break;
                                 } else {
                                     System.out.println("invalid number");
                                 }
@@ -1322,6 +1288,50 @@ public static void SimService(){
 
 
 
+public static void optionEight(){
+    System.out.println("""
+                        1  -> Type of view
+                        2  -> Memory status
+                        3  -> enter 0 to go back to previous menu
+                        4  -> enter 99 to go back to main menu
+                        """);
+
+                int card = input.nextInt();
+
+                switch (card) {
+                    case 99 -> main(null);
+                    case 0 -> PhoneBook();
+
+                    case 1 -> {
+
+                        System.out.println("Type of view");
+                        System.out.println("enter 0 to go back to previous menu");
+                        int enterNumber = input.nextInt();
+                        if (enterNumber == 0) {
+                           optionEight();
+                        } else {
+                            System.out.println("invalid number");
+                        }
+                        break;
+
+                    }
+
+                    case 2 -> {
+                        System.out.println("Memory status");
+                        System.out.println("enter 0 to go back to previous menu");
+                        int enterNumber = input.nextInt();
+                        if (enterNumber == 0) {
+                             optionEight();
+                        } else {
+                            System.out.println("invalid number");
+                        }
+                        break;
+                    }
+                    default -> System.out.println("invalid input");
+
+
+}
+}
 
 
 

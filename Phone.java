@@ -454,9 +454,9 @@ public static void Reminder(){
         case 1 : System.out.println("Alarm clock"); break;
         case 2 : System.out.println("clock setting"); break;
         case 3 : System.out.println("Date setting"); break;
-        case 4 : System.out.println("stopwatch"); break;
+        case 4 : System.out.println("Stop watch"); break;
         case 5 : System.out.println("Countdown timer"); break;
-        case 6 : System.out.println("auto update of date and time"); break;
+        case 6 : System.out.println("auto update date and time"); break;
         default : System.out.println("invalid input");
         break;}
 

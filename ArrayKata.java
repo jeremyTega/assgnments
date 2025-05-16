@@ -86,48 +86,73 @@ public static int sumOf (int [] numbers){
 
 
         public static int noOfOddNumers(int [] numbers){
+                int  count = 0;
+                for(int number: numbers){
+                        if(number % 2 != 0){
+                                count++;
+                        }
+                }
+                return count;
+        }
+
+         public static int noOfEvenNumers(int [] numbers){
+                int  count = 0;
+                for(int number: numbers){
+                        if(number % 2 == 0){
+                                count++;
+                        }
+                }
+                return count;
+        }
+
+
+          public static int[] evenNumbersIn(int [] numbers){
+
+        int[] evenNumbers = new int[noOfEvenNumers(numbers)];
+
        int  count = 0;
-        for(int number: numbers){
-        if(number % 2 != 0){
-        count ++;
+        for(int i = 0; i<numbers.length; i++){
+        if(numbers[i] % 2 == 0){
+        evenNumbers[count++] = numbers[i];
+
         }
         }
-        return count;
+        return evenNumbers;
         }
 
 
-          public static int noOfEvenNumers(int [] numbers){
-       int  count = 0;
-        for(int number: numbers){
-        if(number % 2 == 0){
-        count ++;
-        }
-        }
-        return count;
-        }
 
-           public static int[] noOfEvenNumers(int [] numbers){
+         public static int[] oddNumbersIn(int[] numbers){
+                int[] oddNumbers = new int[noOfOddNumers(numbers)];
 
-        for(int number: numbers){
-        if(number % 2 != 0){
-        count ++;
-        }
-        }
-        return count;
+                int currentIndex = 0;
+                for(int i = 0; i< numbers.length; i++){
+                        if(numbers[i] % 2 != 0){
+                                oddNumbers[currentIndex++] = numbers[i];
+                        }
+                }
+                return oddNumbers;
         }
 
 
-         public static int[] oddNumbersIn(int [] numbers){
-            int[] oddNumbers = new int[]
-            int count = 0;
-        for(int number: numbers){
-        if(number % 2 != 0){
-        oddNumbers[count] = number;
-        count ++;
+
+         public static int[] squareOf(int[] numbers){
+               int squareOfNumbers[] = new int[numbers.length];
+               for(int i = 0; i< numbers.length; i++){
+                squareOfNumbers[i] = numbers[i] * numbers[i];
+               }
+               return squareOfNumbers;
         }
-        }
-        return oddNumbers;
-        }
+
+
+
+
+
+
+
+
+
+
 
 
 
